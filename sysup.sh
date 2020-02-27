@@ -28,7 +28,7 @@ do
     message="$hostname @ $addr via $ext_addr, last seen: $date, $uptime"
     {
         #uncomment the following line for scp-mode. Requires ss-keygen and ssh-copy-id to remote host.
-        #ssh user@example.com "echo $message > ~/public_html/sysup/$hostname.txt"
+        #ssh user@example.com "echo $message > ~/public_html/$hostname.txt"
         #uncomment the following lines for www-mode. Requires sysupload.php script to exist at remote dir and dir possibly to be chmod 777.
         #urlmessage=$(echo $message | sed -r 's/ /+/g')
         #curl -m 2 "http://example.com/~user/sysupload.php?host=$hostname&data=$urlmessage"
