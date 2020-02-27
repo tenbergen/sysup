@@ -45,7 +45,7 @@ ssh user@example.com "echo $message > ~/public_html/sysup/$hostname.txt"
 ### Start the service
 To start the service, simply run:
 ```
-sudo systemctl start sysup.service
+sudo systemctl enable sysup.service
 ```
 
 ### Using crontab
