@@ -1,0 +1,13 @@
+[Unit]
+#Launch the sysup script that makes headless systems report their IP address.
+Description= Sysup IP Address Reporting
+
+[Service]
+User=root
+Type=simple
+ExecStart=/home/pi/sysup/sysup.sh >> /home/pi/sysup/sysup.log 2>&1
+StandardInput=tty-force
+Restart=always
+
+[Install]
+WantedBy=default.target
