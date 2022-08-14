@@ -1,4 +1,13 @@
 #!/bin/sh
+ping -c 1 google.com >/dev/null 2>&1
+Return="$?"
+if [ "$Return" -eq "0" ]; then
+echo ""
+clear
+else
+echo " Check Your Internet Connection"
+exit
+fi
 # kFreeBSD do not accept scripts as interpreters, using #!/bin/sh and sourcing.
 if [ true != "$INIT_D_SCRIPT_SOURCED" ] ; then
     set "$0" "$@"; INIT_D_SCRIPT_SOURCED=true . /lib/init/init-d-script
